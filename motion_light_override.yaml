@@ -1,0 +1,39 @@
+##========== Auto backyard light ==========##
+- id: auto_backyard_light
+  alias: "Auto backyard light"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.backyard_motion # CHANGE THIS
+      from: "off"
+      to: "on"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.backyard_light # CHANGE THIS
+        state: "off"
+      # Add any other condition you would like, e.g., is_day_time
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: light.backyard_light # CHANGE THIS
+    # Wait for the motion to stop for 1 minute
+    # or the light is manually turned off
+    - alias: "wait"
+      wait_for_trigger:
+        - platform: state
+          entity_id: light.backyard_light # CHANGE THIS
+          from: "on"
+          to: "off"
+        - platform: state
+          entity_id: binary_sensor.backyard_motion # CHANGE THIS
+          from: "on"
+          to: "off"
+          for:
+            seconds: 10
+    # Stop execution if the light is turned off manually
+    - condition: template
+      value_template: "{{ wait.trigger.idx == '1' }}"
+    - service: light.turn_off
+      target:
+        entity_id: light.backyard_light # CHANGE THIS
