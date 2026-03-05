@@ -24,12 +24,12 @@ blueprint:
       default: []
       selector:
         action: null
-#    left_short_release:
-#      name: Left Short Release
-#      description: Left Short Release
-#      default: []
-#      selector:
-#        action: null
+    left_short_release:
+      name: Left Short Release (Momentary Button)
+      description: Left Short Release
+      default: []
+      selector:
+        action: null
     left_double_press:
       name: Left Double Press
       description: Left Double Press
@@ -54,30 +54,30 @@ blueprint:
       default: []
       selector:
         action: null
- #   left_hold:
- #     name: Left Hold
- #     description: Left Hold
- #     default: []
- #     selector:
- #       action: null
- #   left_long_release:
- #     name: Left Long Release
- #     description: Left Long Relase
- #     default: []
- #     selector:
- #       action: null
+    left_hold:
+      name: Left Hold (Momentary Button)
+      description: Left Hold
+      default: []
+      selector:
+        action: null
+    left_long_release:
+      name: Left Long Release (Momentary Button)
+      description: Left Long Relase
+      default: []
+      selector:
+        action: null
     right_press:
       name: Right Press
       description: Right press
       default: []
       selector:
         action: null
-#    right_short_release:
-#      name: Right Short Release
-#      description: Right Short Release
-#      default: []
-#      selector:
-#        action: null
+    right_short_release:
+      name: Right Short Release (Momentary Button)
+      description: Right Short Release
+      default: []
+      selector:
+        action: null
     right_double_press:
       name: Right Double Press
       description: Right Double Press
@@ -102,18 +102,18 @@ blueprint:
       default: []
       selector:
         action: null
-#    right_hold:
-#      name: Right Hold
-#      description: Right Hold
-#      default: []
-#      selector:
-#        action: null
-#    right_long_release:
-#      name: Right Long Release
-#      description: Right Long Relase
-#      default: []
-#      selector:
-#        action: null
+    right_hold:
+      name: Right Hold (Momentary Button)
+      description: Right Hold
+      default: []
+      selector:
+        action: null
+    right_long_release:
+      name: Right Long Release (Momentary Button)
+      description: Right Long Relase
+      default: []
+      selector:
+        action: null
 
 trigger:
   - platform: event
