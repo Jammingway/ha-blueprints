@@ -1,7 +1,7 @@
 blueprint:
   name: Philips Hue Wall Module 2.0.1 (Customized)
   description: "Philips Hue Wall Module (RDM001 / RDM004)\n
-  Valid Mode(34) IDs SwitchMode.SinglePush, SwitchMode.DoublePush, SwitchMode.SingleRocker and SwitchMode.DoubleRocker\n
+  Valid Mode(34) IDs SwitchMode.SingleRocker, SwitchMode.DoubleRocker, SwitchMode.SinglePush and SwitchMode.DoublePush\n
   This blueprint allows you to use a Philips Wall Module (RDM001 and RDM004) to trigger automations.\n
     You need to have the module paired to your Home Assistant Zigbee integration (ZHA).\n
     You need to configure the module depending on which type of physical switch used (single/double and rocker/push).\n
